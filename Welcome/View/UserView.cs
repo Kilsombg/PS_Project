@@ -30,7 +30,7 @@ namespace Welcome.View
 
         public void DisplayError()
         {
-            throw new NotImplementedException();
+            throw new Exception("Error");
         }
     }                         
 }
