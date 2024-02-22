@@ -29,6 +29,13 @@ namespace Welcome.ViewModel
             set { _user.Role = value; }
         }
 
+        
+        public string Password
+        {
+            get { return EncodingConverter.DecryptPassword(_user.Password); }
+            set { _user.Password = EncodingConverter.EncryptPassword(value); }
+        }
+
         public string FacultyNumber
         {
             get { return _user.FacultyNumber; }
