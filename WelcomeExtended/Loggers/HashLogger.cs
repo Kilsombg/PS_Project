@@ -16,7 +16,7 @@ namespace WelcomeExtended.Loggers
         public HashLogger(string name)
         {
             _name = name;
-            _logMessage = new ConcurrentDictionary<int, string>();  
+            _logMessage = new ConcurrentDictionary<int, string>();
         }
 
         public IDisposable? BeginScope<TState>(TState state) where TState : notnull
@@ -63,12 +63,21 @@ namespace WelcomeExtended.Loggers
         {
             Console.WriteLine("LogMessages:");
             StringBuilder sb = new StringBuilder();
-            foreach(var message in _logMessage)
+            foreach (var message in _logMessage)
             {
                 sb.Append(message.ToString());
                 sb.Append(',');
             }
             Console.WriteLine(sb);
+        }
+
+        public void PrintLogMessageById(int id)
+        {
+            Console.WriteLine(_logMessage[id]);
+        }
+
+        public void RemoveLogMessageById(int id)
+        {
         }
     }
 }

@@ -2,6 +2,7 @@
 using Welcome.Others;
 using Welcome.View;
 using Welcome.ViewModel;
+using WelcomeExtended.Loggers;
 using static WelcomeExtended.Others.Delegates;
 
 namespace WelcomeExtended
