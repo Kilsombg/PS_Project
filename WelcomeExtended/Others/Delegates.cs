@@ -21,7 +21,7 @@ namespace WelcomeExtended.Others
         {
             Console.WriteLine("- DELEGATES -");
             Console.WriteLine($"{error}");
-            Console.WriteLine("-DELEGATES - ");
+            Console.WriteLine("-DELEGATES -");
         }
 
         public delegate void ActionOnError(string errorMessage);

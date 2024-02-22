@@ -25,7 +25,8 @@ namespace WelcomeExtended
 
                 view.Display();
 
-                view.DisplayError();
+                view.DisplayError("error");
+                view.DisplayError("error2");
             }
             catch (Exception ex) {
                 var log = new ActionOnError(Log);
@@ -35,6 +36,8 @@ namespace WelcomeExtended
             {
                 Console.WriteLine("Executed in any case!");
             }
+
+
         }
     }
 }

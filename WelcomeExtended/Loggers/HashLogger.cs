@@ -58,5 +58,17 @@ namespace WelcomeExtended.Loggers
             Console.ResetColor();
             _logMessage[eventId.Id] = message;
         }
+
+        public void PrintAllLogMessages()
+        {
+            Console.WriteLine("LogMessages:");
+            StringBuilder sb = new StringBuilder();
+            foreach(var message in _logMessage)
+            {
+                sb.Append(message.ToString());
+                sb.Append(',');
+            }
+            Console.WriteLine(sb);
+        }
     }
 }

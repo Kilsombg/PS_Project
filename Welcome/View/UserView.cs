@@ -28,9 +28,9 @@ namespace Welcome.View
 
         }
 
-        public void DisplayError()
+        public void DisplayError(string message)
         {
-            throw new Exception("Error");
+            throw new Exception(message);
         }
     }                         
 }
