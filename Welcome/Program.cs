@@ -8,7 +8,7 @@ namespace Welcome
     {
         static void Main(string[] args)
         {
-            User user = new User("Ivan", "1234", Others.UserRolesEnum.STUDENT, "123", "name@gmail.com");
+            User user = new User("Ivan Kamenov", "1234", Others.UserRolesEnum.STUDENT, "123", "name@gmail.com");
 
             UserViewModel userViewModel = new UserViewModel(user);
 
