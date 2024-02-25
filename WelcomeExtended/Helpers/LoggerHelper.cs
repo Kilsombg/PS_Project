@@ -10,10 +10,21 @@ namespace WelcomeExtended.Helpers
 {
     internal static class LoggerHelper
     {
+        public static ILoggerFactory loggerFactory = new LoggerFactory();
+
         public static ILogger GetLogger(string categoryName)
         {
-            var loggerFactory = new LoggerFactory();
             loggerFactory.AddProvider(new LoggerProvider());
+
+            return loggerFactory.CreateLogger(categoryName);
+        }
+
+        public static ILogger GetTextLogger(string categoryName)
+        {
+            string path =Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())));
+            path = Path.Combine(Path.GetDirectoryName(path), "logs");
+
+            loggerFactory.AddProvider(new TextLoggerProvider(path));
 
             return loggerFactory.CreateLogger(categoryName);
         }
