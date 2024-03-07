@@ -38,7 +38,7 @@ namespace WelcomeExtended.Helpers
 
                 return data.ValidateUser(name, password);
         }
-        public static User GetUser(this UserData data, string name, string password)
+        public static User Login(this UserData data, string name, string password)
         {   
             return data.GetUser(name, password);
         }
