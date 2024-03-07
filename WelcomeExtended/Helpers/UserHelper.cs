@@ -16,6 +16,7 @@ namespace WelcomeExtended.Helpers
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("User{\n");
+            sb.Append($"Id: {user.Id},\n");
             sb.Append($"Name: {user.Name},\n");
             sb.Append($"FacultyNumber: {user.FacultyNumber},\n");
             sb.Append($"Role: {user.Role},\n");
