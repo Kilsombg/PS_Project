@@ -27,32 +27,7 @@ namespace WelcomeExtended
 
             try
             {
-                UserData userData = new UserData();
-                User studentUser = new User()
-                {
-                    Name = "student",
-                    Password = "123",
-                    Role = UserRolesEnum.STUDENT
-                };
-                userData.AddUser(studentUser);
-                userData.AddUser(new User()
-                {
-                    Name = "Student2",
-                    Password = "123",
-                    Role = UserRolesEnum.STUDENT
-                });
-                userData.AddUser(new User()
-                {
-                    Name = "Teacher",
-                    Password = "1234",
-                    Role = UserRolesEnum.PROFESSOR
-                });
-                userData.AddUser(new User()
-                {
-                    Name = "Admin",
-                    Password = "12345",
-                    Role = UserRolesEnum.ADMIN
-                });
+                UserData userData = InitializeDataEx3();
 
                 var userService = new UserService(userData, loginLogger);
 
@@ -72,6 +47,36 @@ namespace WelcomeExtended
             {
                 Console.WriteLine("Executed in any case!");
             }
+        }
+
+        private static UserData InitializeDataEx3()
+        {
+            UserData userData = new UserData();
+            userData.AddUser(new User()
+            {
+                Name = "student",
+                Password = "123",
+                Role = UserRolesEnum.STUDENT
+            });
+            userData.AddUser(new User()
+            {
+                Name = "Student2",
+                Password = "123",
+                Role = UserRolesEnum.STUDENT
+            });
+            userData.AddUser(new User()
+            {
+                Name = "Teacher",
+                Password = "1234",
+                Role = UserRolesEnum.PROFESSOR
+            });
+            userData.AddUser(new User()
+            {
+                Name = "Admin",
+                Password = "12345",
+                Role = UserRolesEnum.ADMIN
+            });
+            return userData;
         }
     }
 }

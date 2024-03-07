@@ -29,11 +29,11 @@ namespace WelcomeExtended.Helpers
         {
                 if (name == null || name == "")
                 {
-                    throw new Exception("The {name} cannot be empty");
+                    throw new Exception("The field {name} cannot be empty");
                 }
                 if (password == null || password == "")
                 {
-                    throw new Exception("The {password} cannot be empty");
+                    throw new Exception("The field {password} cannot be empty");
                 }
 
                 return data.ValidateUser(name, password);
