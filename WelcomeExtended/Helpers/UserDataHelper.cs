@@ -10,21 +10,8 @@ using WelcomeExtended.Data;
 
 namespace WelcomeExtended.Helpers
 {
-    public static class UserHelper
+    public static class UserDataHelper
     {
-        public static string ConvertToString(this User user)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("User{\n");
-            sb.Append($"Id: {user.Id},\n");
-            sb.Append($"Name: {user.Name},\n");
-            sb.Append($"FacultyNumber: {user.FacultyNumber},\n");
-            sb.Append($"Role: {user.Role},\n");
-            sb.Append("}");
-
-            return sb.ToString();
-        }
-
         public static bool ValidateCredentials(this UserData data, string name, string password)
         {
                 if (name == null || name == "")

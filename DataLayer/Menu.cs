@@ -22,7 +22,7 @@ namespace DataLayer
         {
             while (true)
             {
-                Console.WriteLine("Choose a number:");
+                Console.WriteLine("\nChoose a number:");
                 Console.WriteLine("1 : Take all users");
                 Console.WriteLine("2 : Add user");
                 Console.WriteLine("3 : Delete user");
@@ -53,7 +53,7 @@ namespace DataLayer
 
                             string name = Console.ReadLine();
 
-                            Console.Write("Enter username: ");
+                            Console.Write("Enter password: ");
 
                             string password = Console.ReadLine();
 
@@ -62,7 +62,7 @@ namespace DataLayer
                         }
                     case 3:
                         {
-                            Console.Write("Enter name");
+                            Console.Write("Enter name: ");
 
                             string name = Console.ReadLine();
 

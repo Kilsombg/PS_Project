@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using DataLayer.Database;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace WelcomeExtended.Loggers.DBLogger
 
         public ILogger CreateLogger(string categoryName)
         {
-            return new DBLogger();
+            return new DBLogger(new DBLogContext());
         }
 
         public void Dispose()

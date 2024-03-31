@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WelcomeExtended.Helpers;
+using Welcome.Helpers;
 
 namespace DataLayer.Services
 {
@@ -36,7 +36,10 @@ namespace DataLayer.Services
             context.Users.Add(new DatabaseUser()
             {
                 Name = name,
-                Password = password
+                Password = password,
+                FacultyNumber = "",
+                Email = "",
+                Expired = DateTime.Now.AddYears(10),
             });
             context.SaveChanges();
         }

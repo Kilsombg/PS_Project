@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using Welcome.Model;
 using WelcomeExtended.Data;
 using WelcomeExtended.Helpers;
+using Welcome.Helpers;
 using static WelcomeExtended.Others.Delegates;
 
 namespace WelcomeExtended.Services
