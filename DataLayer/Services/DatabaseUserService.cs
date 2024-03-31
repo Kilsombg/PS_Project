@@ -25,10 +25,32 @@ namespace DataLayer.Services
 
         public void PrintAll(List<DatabaseUser> users)
         {
-            foreach(DatabaseUser user in users)
+            foreach (DatabaseUser user in users)
             {
                 Console.WriteLine(user.ConvertToString());
             }
         }
+
+        public void AddUser(string name, string password)
+        {
+            context.Users.Add(new DatabaseUser()
+            {
+                Name = name,
+                Password = password
+            });
+            context.SaveChanges();
+        }
+        public void RemoveUser(string name)
+        {
+            var user = context.Users.Where(x => x.Name == name).FirstOrDefault();
+
+            if (user != null)
+            {
+                context.Users.Remove(user);
+            }
+
+            context.SaveChanges();
+        }
+
     }
 }

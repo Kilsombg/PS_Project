@@ -27,7 +27,7 @@ namespace DataLayer
                 Console.WriteLine("2 : Add user");
                 Console.WriteLine("3 : Delete user");
 
-                int choice;
+                int choice = 0;
                 try
                 {
                     choice = Int32.Parse(Console.ReadLine());
@@ -40,7 +40,40 @@ namespace DataLayer
                 switch (choice)
                 {
                     case 1:
-                        List<DatabaseUser> users = userService.GetAll();
+                        {
+                            List<DatabaseUser> users = userService.GetAll();
+
+                            userService.PrintAll(users);
+
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.Write("Enter username: ");
+
+                            string name = Console.ReadLine();
+
+                            Console.Write("Enter username: ");
+
+                            string password = Console.ReadLine();
+
+                            userService.AddUser(name, password);
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.Write("Enter name");
+
+                            string name = Console.ReadLine();
+
+                            userService.RemoveUser(name);
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Wrong instruction!");
+                            break;
+                        }
                 };
             }
         }
