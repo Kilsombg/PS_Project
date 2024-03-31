@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WelcomeExtended\WelcomeExtended.csproj" />
     <ProjectReference Include="..\Welcome\Welcome.csproj" />
   </ItemGroup>
 
